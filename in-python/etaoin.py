@@ -7,7 +7,7 @@ import pprint
 import sys
 
 def main():
-""" defaultdict module lets you build dictionary keys on the fly."""
+    """ defaultdict module lets you build dictionary keys on the fly."""
     text = input("Please enter your text below: \n")
     alphabets = 'abcdefghijklmnopqrstuvwxyz'
 
@@ -19,5 +19,6 @@ def main():
     print()
     print(f"text = {text}\n",file=sys.stderr)
     pprint.pprint(my_dict)
+
 if __name__ == "__main__":
     main()
