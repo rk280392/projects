@@ -3,7 +3,7 @@ name: Pylint
 on: [push]
 
 jobs:
-  test:
+  python:
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -25,6 +25,10 @@ jobs:
     - name: PyDocStyle check
       run: |
         pydocstyle $(git ls-files '*.py')
+  go:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
     - name: Set up Go
       uses: actions/setup-go@v2
       with:
